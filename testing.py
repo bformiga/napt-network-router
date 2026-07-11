@@ -1,31 +1,5 @@
 #! /usr/bin/env python3
 
-"""
-Sample client for COMP3331/9331 NAT Assignment
-
-This program sends a series of pre-crafted logical UDP/IPv4 packets to a NAT
-implementation running on localhost. It is intended to assist with initial
-testing of your NAT system.
-
-Usage:
-    python3 sample_client.py <nat_real_internal_port>
-
-Arguments:
-    <nat_real_internal_port>  UDP port on localhost where NAT is listening.
-
-Requirements:
-    - logical_packets.py must be in the same directory and define an
-      iterable `packets`, which contains the pre-crafted packets.
-
-Notes:
-    - This client only sends packets; it does not listen for replies.
-    - Students are strongly encouraged to develop their own client programs
-      and their own logical packets, or extend these, in order to exercise
-      all required NAT behaviours and edge cases.
-
-Version: 1.0
-"""
-
 import argparse
 import socket
 import sys
