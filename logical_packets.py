@@ -103,40 +103,6 @@ packets = [
         b'\x44'                 # b'D'
     )
     ,
-    # 10.0.0.2:1234 â†’ 1.1.1.1:53  payload=b'Good luck with the COMP3331/9331 assignment!'
-    (
-        # --- IPv4 header (20 bytes) ---
-        b'\x45'                 # Version=4, IHL=5
-        b'\x00'                 # DSCP/ECN
-        b'\x00\x48'             # Total Length = 72
-        b'\x00\x05'             # Identification = 5
-        b'\x00\x00'             # Flags: R=0, DF=0, MF=0; Offset=0
-        b'\x40'                 # TTL = 64
-        b'\x11'                 # Protocol = 17 (UDP)
-        b'\x6e\x9d'             # Header checksum = 0x6e9d
-        b'\x0a\x00\x00\x02'     # Source IP = 10.0.0.2
-        b'\x01\x01\x01\x01'     # Dest IP   = 1.1.1.1
-
-        # --- UDP header (8 bytes) ---
-        b'\x04\xd2'             # Source port = 1234
-        b'\x00\x35'             # Dest port   = 53
-        b'\x00\x34'             # Length = 52
-        b'\xec\x48'             # Checksum = 0xec48
-
-        # --- Payload (44 bytes) ---
-        b'\x47\x6f\x6f\x64'     # b'Good'
-        b'\x20\x6c\x75\x63'     # b' luc'
-        b'\x6b\x20\x77\x69'     # b'k wi'
-        b'\x74\x68\x20\x74'     # b'th t'
-        b'\x68\x65\x20\x43'     # b'he C'
-        b'\x4f\x4d\x50\x33'     # b'OMP3'
-        b'\x33\x33\x31\x2f'     # b'331/'
-        b'\x39\x33\x33\x31'     # b'9331'
-        b'\x20\x61\x73\x73'     # b' ass'
-        b'\x69\x67\x6e\x6d'     # b'ignm'
-        b'\x65\x6e\x74\x21'     # b'ent!'
-    )
-    ,
     # 10.0.0.2:1234 â†’ 1.1.1.1:53  payload=b'I only have a short time to live :('
     (
         # --- IPv4 header (20 bytes) ---
